@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica 8</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px; /* Tamaño de la gráfica */
+            margin-bottom: 30px;
+        }
+
+        .btn-regresar {
+            background-color: #2962ff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-regresar:hover {
+            background-color: #0039cb;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="titulo-pregunta">8. ¿Qué opinas de la claridad en el proceso de cotización?</h2>
+
+    <div class="chart-container">
+        <canvas id="miGrafica"></canvas>
+    </div>
+
+    <a href="graficas.html" class="btn-regresar">Regresar a Menú de Gráficas</a>
+
+    <script>
+        // --- CONFIGURACIÓN DE DATOS ---
+        
+        // 1. ETIQUETAS (Las opciones de respuesta)
+        const labels = [
+            'Excelente. Todo muy claro desde el principio.',
+            'Buena. Claro, pero tuve algunas dudas menores.',
+            'Confuso. No entendía qué incluía el precio.',
+            'Malo. El precio final cambió sin aviso.'
+        ];
+        const dataValues = [60, 30, 10, 0];
+
+        // -----------------------------
+
+        const ctx = document.getElementById('miGrafica').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie', // Tipo de gráfica: Pastel
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: dataValues,
+                    backgroundColor: [
+                        '#4285F4', // Azul
+                        '#DB4437', // Rojo
+                        '#F4B400', // Amarillo
+                        '#0F9D58'  // Verde
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom', // Leyenda abajo
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

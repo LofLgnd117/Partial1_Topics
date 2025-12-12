@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Gráficas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a148c; /* Morado oscuro */
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Icono simulado de gráfica */
+        .icon-chart {
+            font-size: 30px;
+        }
+
+        /* Grid para los botones (3 columnas como en la imagen) */
+        .grid-botones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Estilo de los botones de las gráficas */
+        .btn-grafica {
+            background-color: white;
+            border: 2px solid #7c4dff; /* Borde morado claro */
+            color: #4a148c;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .btn-grafica:hover {
+            background-color: #ede7f6; /* Fondo morado muy muy claro */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Botón inferior grande */
+        .btn-regresar {
+            display: block;
+            width: 100%;
+            background-color: #2962ff; /* Azul/Morado fuerte de la imagen */
+            color: white;
+            padding: 15px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn-regresar:hover {
+            background-color: #0039cb;
+        }
+        
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            .grid-botones {
+                grid-template-columns: 1fr; /* 1 columna en cel */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            <span class="icon-chart">📊</span> 
+            Gráficas del Proyecto INTEGRADORA
+        </h1>
+
+        <div class="grid-botones">
+            <a href="grafica1.html" class="btn-grafica">Gráfica 1</a>
+            <a href="grafica2.html" class="btn-grafica">Gráfica 2</a>
+            <a href="grafica3.html" class="btn-grafica">Gráfica 3</a>
+            <a href="grafica4.html" class="btn-grafica">Gráfica 4</a>
+            <a href="grafica5.html" class="btn-grafica">Gráfica 5</a>
+            <a href="grafica6.html" class="btn-grafica">Gráfica 6</a>
+            <a href="grafica7.html" class="btn-grafica">Gráfica 7</a>
+            <a href="grafica8.html" class="btn-grafica">Gráfica 8</a>
+            <a href="grafica9.html" class="btn-grafica">Gráfica 9</a>
+            <a href="grafica10.html" class="btn-grafica">Gráfica 10</a>
+            <a href="grafica11.html" class="btn-grafica">Gráfica 11</a>
+            <a href="grafica12.html" class="btn-grafica">Gráfica 12</a>
+            <a href="grafica13.html" class="btn-grafica">Gráfica 13</a>
+            <a href="grafica14.html" class="btn-grafica">Gráfica 14</a>
+            <a href="grafica15.html" class="btn-grafica">Gráfica 15</a>
+            </div>
+
+        <a href="evaluacion_parcial_3.html" class="btn-regresar">Regresar a Menú Principal</a>
+    </div>
+
+</body>
+</html>
